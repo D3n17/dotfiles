@@ -1,0 +1,38 @@
+* {
+    all: unset;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+}
+
+window#waybar {
+/*    background-color: rgba(49, 50, 57, 0.60);*/
+    background-color: rgba(50, 50, 50, 0.0);
+    color: #ffffff;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused, #workspaces button.active {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+/*    background-color: #eb4d4b;*/
+    background-color: #e2dedb;
+    color: #111111;
+}
+
+#wireplumber,
+#battery,
+#clock {
+    padding: 0 8px;
+}

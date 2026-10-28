@@ -1,0 +1,39 @@
+{
+    "layer": "top",
+    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["keyboard-state", "hyprland/language", "wireplumber", "battery", "clock"],
+    "hyprland/window": {
+        "max-length": 50
+    },
+
+    "battery": {
+        "interval": 60,
+        "format": "{icon} {capacity}% |",
+        "format-icons": {
+            "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+            "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+        }
+    },
+
+
+    "clock": {
+        "interval": 1,
+        // "format-alt": "{:%a, %d. %B  %H:%M}"
+        "format-alt": "{:%a %d.%m.%Y  %H:%M:%S}"
+    },
+    "wireplumber": {
+	"format": "{icon} {volume}% |",
+    	"format-muted": " mute|",
+    	"format-icons": ["", ""]
+    },
+    "hyprland/workspaces": {
+    	"on-click": "activate",
+    	"format": "{id}"
+    },
+    "hyprland/language": {
+        "format": "{} |",
+        "format-en": "en",
+        "format-ru": "ru"
+    }
+}
