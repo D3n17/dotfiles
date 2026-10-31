@@ -11,6 +11,8 @@ vim.opt.expandtab = true     -- tabs to spaces
 vim.opt.autoindent = true    -- shift from previous line
 vim.opt.cinoptions = "g0"    -- for public/private C++
 vim.opt.splitright = true    -- new vsplits open in right
+vim.opt.swapfile = false
+vim.opt.signcolumn = "yes"   -- space for W, E...
 
 vim.opt.wrap = true          -- long lines
 vim.opt.linebreak = true
@@ -38,6 +40,9 @@ vim.opt.incsearch = true
 vim.keymap.set('n', 'ge', vim.diagnostic.open_float, { desc = "open error window" })
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {})
+
+-- formatting <leader>fl
+vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 
 -- terminal
 local term_buf = nil
