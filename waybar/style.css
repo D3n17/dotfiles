@@ -6,7 +6,7 @@
 
 window#waybar {
 /*    background-color: rgba(49, 50, 57, 0.60);*/
-    background-color: rgba(50, 50, 50, 0.0);
+    background-color: rgba(0, 0, 0, 0.0);
     color: #ffffff;
 }
 
@@ -31,8 +31,37 @@ window#waybar {
     color: #111111;
 }
 
+#tray {
+    padding: 1 10px;
+}
+
+#keyboard-state,
 #wireplumber,
 #battery,
 #clock {
     padding: 0 8px;
+}
+
+tooltip {
+    background-color: rgba(20, 20, 20, 0.75);
+    border: 1px solid #454545;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+menu {
+    background-color: rgba(20, 20, 20, 0.75);
+    border: 1px solid #454545;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+menuitem {
+    background-color: transparent;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+menuitem:hover {
+    background-color: rgba(100, 100, 100, 0.25);
 }

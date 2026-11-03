@@ -13,6 +13,7 @@ hl.on("hyprland.start", function ()
 	hl.exec_cmd("hyprpaper")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("hyprsunset")
+    hl.exec_cmd("blueman-applet")
 end)
 
 hl.on("config.reloaded", function ()

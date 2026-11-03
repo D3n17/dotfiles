@@ -1,8 +1,8 @@
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+    "modules-left": ["hyprland/workspaces", "tray", "network"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["keyboard-state", "hyprland/language", "wireplumber", "battery", "clock"],
+    "modules-right": ["hyprland/language", "backlight", "wireplumber", "battery", "clock"],
     "hyprland/window": {
         "max-length": 50
     },
@@ -18,21 +18,49 @@
 
 
     "clock": {
+        "locale": "en_US.UTF-8",
         "interval": 1,
-        // "format-alt": "{:%a, %d. %B  %H:%M}"
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "iso8601": true,
+            "format": {
+                "today": "<span color='#000000' background='#dddddd'><b>{}</b></span>"
+            }
+        },
         "format-alt": "{:%a %d.%m.%Y  %H:%M:%S}"
     },
     "wireplumber": {
-	"format": "{icon} {volume}% |",
-    	"format-muted": " mute|",
-    	"format-icons": ["", ""]
+        "format": "{icon} {volume}% |",
+        "format-muted": " mute|",
+        "format-icons": ["", ""],
+        "on-click": "pavucontrol"
     },
     "hyprland/workspaces": {
-    	"on-click": "activate",
-    	"format": "{id}"
+        "on-click": "activate",
+        "format": "{id}"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10,
+        "shot-passive-items": true
+    },
+    "backlight": {
+        "format": " {icon} {percent}% |",
+        "format-icons": ["󰃜", "󰃛", "󰃚"],
+        "tooltip-format": "{percent}%"
+    },
+    "network": {
+        "interval": 5,
+        "format-wifi": "| {essid} ({signalStrength}%)",
+        "format-ethernet": "| {ipaddr}/{cidr}",
+        "tooltip-format": " {ifname} via {gwaddr}",
+        "format-linked": "| {ifname} (No IP)",
+        "format-disconnected": "Disconnected",
+        "format-alt": "| {ifname}: {ipaddr}/{cidr}"
     },
     "hyprland/language": {
-        "format": "{} |",
+        "format": " {} |",
         "format-en": "en",
         "format-ru": "ru"
     }
