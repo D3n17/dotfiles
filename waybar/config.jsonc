@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["hyprland/workspaces", "tray", "network"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["hyprland/language", "backlight", "wireplumber", "battery", "clock"],
+    "modules-right": ["hyprland/language", "custom/notification", "backlight", "wireplumber", "battery", "clock"],
     "hyprland/window": {
         "max-length": 50
     },
@@ -58,6 +58,21 @@
         "format-linked": "| {ifname} (No IP)",
         "format-disconnected": "Disconnected",
         "format-alt": "| {ifname}: {ipaddr}/{cidr}"
+    },
+    "custom/notification": {
+        "tooltip": true,
+        "tooltip-format": "{alt}",
+        "format": " {icon} |",
+        "format-icons": {
+            "notification": "󰂚",
+            "none": "󰂜",
+            "dnd-notification": "󰂛",
+            "dnd-none": "󰂛"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t"
     },
     "hyprland/language": {
         "format": " {} |",
