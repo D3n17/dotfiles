@@ -4,7 +4,7 @@
     "modules-center": ["hyprland/window"],
     "modules-right": ["hyprland/language", "custom/notification", "backlight", "wireplumber", "battery", "clock"],
     "hyprland/window": {
-        "max-length": 50
+        "max-length": 35
     },
 
     "battery": {
@@ -28,7 +28,8 @@
                 "today": "<span color='#000000' background='#dddddd'><b>{}</b></span>"
             }
         },
-        "format-alt": "{:%a %d.%m.%Y  %H:%M:%S}"
+        "format": "{:%H:%M}",
+        "format-alt": "{:%d.%m.%Y  %H:%M:%S}"
     },
     "wireplumber": {
         "format": "{icon} {volume}% |",
@@ -75,7 +76,7 @@
         "on-click": "swaync-client -t"
     },
     "hyprland/language": {
-        "format": " {} |",
+        "format": "{} |",
         "format-en": "en",
         "format-ru": "ru"
     }
