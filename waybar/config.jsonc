@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["hyprland/workspaces", "tray", "network"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["hyprland/language", "custom/notification", "backlight", "wireplumber", "battery", "clock"],
+    "modules-right": ["hyprland/language", "idle_inhibitor", "custom/notification", "backlight", "wireplumber", "battery", "clock"],
     "hyprland/window": {
         "max-length": 35
     },
@@ -79,5 +79,14 @@
         "format": "{} |",
         "format-en": "en",
         "format-ru": "ru"
+    },
+    "idle_inhibitor": {
+        "format": " {icon}  |",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip-format-activated": "Screen will not turn off",
+        "tooltip-format-deactivated": "Screen will turn off"
     }
 }
