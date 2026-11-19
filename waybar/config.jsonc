@@ -9,7 +9,7 @@
 
     "battery": {
         "interval": 60,
-        "format": "{icon} {capacity}% |",
+        "format": "{icon} {capacity}%",
         "format-icons": {
             "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
             "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
@@ -32,8 +32,8 @@
         "format-alt": "{:%d.%m.%Y  %H:%M:%S}"
     },
     "wireplumber": {
-        "format": "{icon} {volume}% |",
-        "format-muted": " mute|",
+        "format": "{icon} {volume}%",
+        "format-muted": "",
         "format-icons": ["", ""],
         "on-click": "pavucontrol"
     },
@@ -44,26 +44,26 @@
     "tray": {
         "icon-size": 18,
         "spacing": 10,
-        "shot-passive-items": true
+        "show-passive-items": true
     },
     "backlight": {
-        "format": " {icon} {percent}% |",
-        "format-icons": ["󰃜", "󰃛", "󰃚"],
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", ""],
         "tooltip-format": "{percent}%"
     },
     "network": {
         "interval": 5,
-        "format-wifi": "| {essid} ({signalStrength}%)",
-        "format-ethernet": "| {ipaddr}/{cidr}",
-        "tooltip-format": " {ifname} via {gwaddr}",
-        "format-linked": "| {ifname} (No IP)",
+        "format-wifi": "{essid} ({signalStrength}%)",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected",
-        "format-alt": "| {ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "custom/notification": {
         "tooltip": true,
         "tooltip-format": "{alt}",
-        "format": " {icon} |",
+        "format": "{icon}",
         "format-icons": {
             "notification": "󰂚",
             "none": "󰂜",
@@ -76,12 +76,12 @@
         "on-click": "swaync-client -t"
     },
     "hyprland/language": {
-        "format": "{} |",
+        "format": "{}",
         "format-en": "en",
         "format-ru": "ru"
     },
     "idle_inhibitor": {
-        "format": " {icon}  |",
+        "format": "{icon}",
         "format-icons": {
             "activated": "",
             "deactivated": ""
