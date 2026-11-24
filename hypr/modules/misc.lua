@@ -9,4 +9,3 @@ hl.config({
         focus_on_activate       = true,
     },
 })
-
