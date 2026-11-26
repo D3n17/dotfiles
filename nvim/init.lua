@@ -4,8 +4,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Base settings
-vim.opt.tabstop = 4          -- tab is 4 spaces
-vim.opt.shiftwidth = 4       -- >> shifts 4
+vim.opt.tabstop = 2          -- tab is 4 spaces
+vim.opt.shiftwidth = 2       -- >> shifts 4
 vim.opt.smarttab = true
 vim.opt.expandtab = true     -- tabs to spaces
 vim.opt.autoindent = true    -- shift from previous line
